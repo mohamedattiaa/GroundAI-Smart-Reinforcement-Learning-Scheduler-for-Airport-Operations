@@ -1,0 +1,57 @@
+rl_system:
+  # Environment settings
+  environment:
+    max_aircraft: 10
+    max_vehicles: 30
+    max_tasks_per_aircraft: 10
+    max_steps: 200
+    
+    # Reward shaping
+    rewards:
+      task_completion: 10.0
+      all_tasks_complete_bonus: 20.0
+      delay_penalty_per_minute: -0.5
+      invalid_action_penalty: -10.0
+  
+  # Training settings
+  training:
+    algorithm: "PPO"  # Options: PPO, DQN, A2C
+    device: "auto"  # auto, cpu, cuda
+    
+    # PPO hyperparameters
+    ppo:
+      learning_rate: 0.0003
+      n_steps: 2048
+      batch_size: 64
+      n_epochs: 10
+      gamma: 0.99
+      gae_lambda: 0.95
+      clip_range: 0.2
+    
+    # DQN hyperparameters
+    dqn:
+      learning_rate: 0.0001
+      buffer_size: 50000
+      learning_starts: 1000
+      batch_size: 32
+      gamma: 0.99
+      target_update_interval: 1000
+    
+    # Training schedule
+    total_timesteps: 100000
+    eval_freq: 10000
+    save_freq: 10000
+    log_interval: 1000
+  
+  # Evaluation settings
+  evaluation:
+    n_eval_episodes: 100
+    deterministic: true
+    render: false
+  
+  # Paths
+  paths:
+    models: "models/rl_checkpoints"
+    logs: "logs/rl"
+    tensorboard: "logs/tensorboard"
+    results: "data/statistics"

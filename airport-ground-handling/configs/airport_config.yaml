@@ -1,0 +1,117 @@
+airport:
+  name: "CDG International"
+  code: "LFPG"
+  timezone: "Europe/Paris"
+  
+  layout:
+    terminals:
+      terminal_A:
+        gates: 12
+        type: ["all"]
+        coordinates:
+          x: 100
+          y: 50
+      
+      terminal_B:
+        gates: 10
+        type: ["all"]
+        coordinates:
+          x: 200
+          y: 80
+      
+      terminal_C:
+        gates: 8
+        type: ["all"]
+        coordinates:
+          x: 300
+          y: 120
+      
+      terminal_D:
+        gates: 6
+        type: ["all"]
+        coordinates:
+          x: 350
+          y: 150
+    
+    remote_stands:
+      count: 15
+      type: ["all"]
+      area_bounds:
+        x_min: 400
+        x_max: 600
+        y_min: 200
+        y_max: 400
+    
+    service_base:
+      coordinates:
+        x: 0
+        y: 0
+
+  vehicle_fleet:
+    fuel_truck:
+      count: 8
+      max_tasks_before_base: 10
+      speed_kmh: 25
+      compatible_aircraft: ["all"]
+    
+    baggage_loader:
+      count: 15
+      max_tasks_before_base: 12
+      speed_kmh: 20
+      compatible_aircraft: ["all"]
+    
+    cargo_loader:
+      count: 8
+      max_tasks_before_base: 8
+      speed_kmh: 18
+      compatible_aircraft: ["all"]
+    
+    catering_truck:
+      count: 12
+      max_tasks_before_base: 4
+      speed_kmh: 20
+      compatible_aircraft: ["all"]
+    
+    cleaning_crew:
+      count: 10
+      max_tasks_before_base: 8
+      speed_kmh: 15
+      compatible_aircraft: ["all"]
+    
+    water_truck:
+      count: 6
+      max_tasks_before_base: 6
+      speed_kmh: 22
+      compatible_aircraft: ["all"]
+    
+    lavatory_truck:
+      count: 5
+      max_tasks_before_base: 8
+      speed_kmh: 22
+      compatible_aircraft: ["all"]
+    
+    passenger_stairs:
+      count: 8
+      max_tasks_before_base: 15
+      speed_kmh: 15
+      compatible_aircraft: ["all"]
+    
+    jetbridge:
+      count: 18
+      max_tasks_before_base: 999
+      speed_kmh: 0
+      compatible_aircraft: ["all"]
+    
+    tug:
+      count: 12
+      max_tasks_before_base: 20
+      speed_kmh: 30
+      compatible_aircraft: ["all"]
+
+  operational_parameters:
+    operating_hours:
+      start: 6
+      end: 23
+    peak_hours: [7, 8, 13, 18, 19, 20]
+    safety_buffer_minutes: 5
+    max_gate_occupancy_minutes: 180

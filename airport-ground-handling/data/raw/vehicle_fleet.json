@@ -1,0 +1,224 @@
+{
+  "fuel_truck": {
+    "count": 8,
+    "specs": {
+      "max_tasks_before_base": 10,
+      "speed_kmh": 25,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "fuel_truck_1",
+      "fuel_truck_2",
+      "fuel_truck_3",
+      "fuel_truck_4",
+      "fuel_truck_5",
+      "fuel_truck_6",
+      "fuel_truck_7",
+      "fuel_truck_8"
+    ]
+  },
+  "baggage_loader": {
+    "count": 15,
+    "specs": {
+      "max_tasks_before_base": 12,
+      "speed_kmh": 20,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "baggage_loader_1",
+      "baggage_loader_2",
+      "baggage_loader_3",
+      "baggage_loader_4",
+      "baggage_loader_5",
+      "baggage_loader_6",
+      "baggage_loader_7",
+      "baggage_loader_8",
+      "baggage_loader_9",
+      "baggage_loader_10",
+      "baggage_loader_11",
+      "baggage_loader_12",
+      "baggage_loader_13",
+      "baggage_loader_14",
+      "baggage_loader_15"
+    ]
+  },
+  "cargo_loader": {
+    "count": 8,
+    "specs": {
+      "max_tasks_before_base": 8,
+      "speed_kmh": 18,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "cargo_loader_1",
+      "cargo_loader_2",
+      "cargo_loader_3",
+      "cargo_loader_4",
+      "cargo_loader_5",
+      "cargo_loader_6",
+      "cargo_loader_7",
+      "cargo_loader_8"
+    ]
+  },
+  "catering_truck": {
+    "count": 12,
+    "specs": {
+      "max_tasks_before_base": 4,
+      "speed_kmh": 20,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "catering_truck_1",
+      "catering_truck_2",
+      "catering_truck_3",
+      "catering_truck_4",
+      "catering_truck_5",
+      "catering_truck_6",
+      "catering_truck_7",
+      "catering_truck_8",
+      "catering_truck_9",
+      "catering_truck_10",
+      "catering_truck_11",
+      "catering_truck_12"
+    ]
+  },
+  "cleaning_crew": {
+    "count": 10,
+    "specs": {
+      "max_tasks_before_base": 8,
+      "speed_kmh": 15,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "cleaning_crew_1",
+      "cleaning_crew_2",
+      "cleaning_crew_3",
+      "cleaning_crew_4",
+      "cleaning_crew_5",
+      "cleaning_crew_6",
+      "cleaning_crew_7",
+      "cleaning_crew_8",
+      "cleaning_crew_9",
+      "cleaning_crew_10"
+    ]
+  },
+  "water_truck": {
+    "count": 6,
+    "specs": {
+      "max_tasks_before_base": 6,
+      "speed_kmh": 22,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "water_truck_1",
+      "water_truck_2",
+      "water_truck_3",
+      "water_truck_4",
+      "water_truck_5",
+      "water_truck_6"
+    ]
+  },
+  "lavatory_truck": {
+    "count": 5,
+    "specs": {
+      "max_tasks_before_base": 8,
+      "speed_kmh": 22,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "lavatory_truck_1",
+      "lavatory_truck_2",
+      "lavatory_truck_3",
+      "lavatory_truck_4",
+      "lavatory_truck_5"
+    ]
+  },
+  "passenger_stairs": {
+    "count": 8,
+    "specs": {
+      "max_tasks_before_base": 15,
+      "speed_kmh": 15,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "passenger_stairs_1",
+      "passenger_stairs_2",
+      "passenger_stairs_3",
+      "passenger_stairs_4",
+      "passenger_stairs_5",
+      "passenger_stairs_6",
+      "passenger_stairs_7",
+      "passenger_stairs_8"
+    ]
+  },
+  "jetbridge": {
+    "count": 18,
+    "specs": {
+      "max_tasks_before_base": 999,
+      "speed_kmh": 0,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "jetbridge_1",
+      "jetbridge_2",
+      "jetbridge_3",
+      "jetbridge_4",
+      "jetbridge_5",
+      "jetbridge_6",
+      "jetbridge_7",
+      "jetbridge_8",
+      "jetbridge_9",
+      "jetbridge_10",
+      "jetbridge_11",
+      "jetbridge_12",
+      "jetbridge_13",
+      "jetbridge_14",
+      "jetbridge_15",
+      "jetbridge_16",
+      "jetbridge_17",
+      "jetbridge_18"
+    ]
+  },
+  "tug": {
+    "count": 12,
+    "specs": {
+      "max_tasks_before_base": 20,
+      "speed_kmh": 30,
+      "compatible_aircraft": [
+        "all"
+      ]
+    },
+    "vehicles": [
+      "tug_1",
+      "tug_2",
+      "tug_3",
+      "tug_4",
+      "tug_5",
+      "tug_6",
+      "tug_7",
+      "tug_8",
+      "tug_9",
+      "tug_10",
+      "tug_11",
+      "tug_12"
+    ]
+  }
+}

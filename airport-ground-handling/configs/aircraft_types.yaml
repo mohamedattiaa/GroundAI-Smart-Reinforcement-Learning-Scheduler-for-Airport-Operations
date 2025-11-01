@@ -1,0 +1,177 @@
+aircraft_types:
+  A320:
+    category: narrow_body
+    pax_capacity: 180
+    cargo_capacity: 5  # tons
+    typical_turnaround: 45  # minutes
+    gate_preference: [terminal_A, terminal_B]
+    tasks:
+      deplaning:
+        duration: 7
+        variance: 0.15
+        required_vehicles: [passenger_stairs]
+        optional_vehicles: [jetbridge]
+      
+      cargo_unload:
+        duration: 10
+        variance: 0.20
+        required_vehicles: [baggage_loader]
+      
+      refueling:
+        duration: 12
+        variance: 0.15
+        required_vehicles: [fuel_truck]
+      
+      catering:
+        duration: 15
+        variance: 0.20
+        required_vehicles: [catering_truck]
+      
+      cleaning:
+        duration: 20
+        variance: 0.25
+        required_vehicles: [cleaning_crew]
+      
+      water_service:
+        duration: 8
+        variance: 0.15
+        required_vehicles: [water_truck]
+      
+      cargo_load:
+        duration: 10
+        variance: 0.20
+        required_vehicles: [baggage_loader]
+      
+      boarding:
+        duration: 15
+        variance: 0.20
+        required_vehicles: [passenger_stairs]
+        optional_vehicles: [jetbridge]
+      
+      pushback:
+        duration: 5
+        variance: 0.10
+        required_vehicles: [tug]
+    
+    precedence:
+      deplaning: []
+      cargo_unload: [deplaning]
+      refueling: [deplaning]
+      catering: [deplaning, cleaning]
+      cleaning: [deplaning]
+      water_service: [deplaning]
+      cargo_load: [cargo_unload, cleaning]
+      boarding: [cleaning, catering]
+      pushback: [boarding, cargo_load, refueling]
+
+  B737:
+    category: narrow_body
+    pax_capacity: 189
+    cargo_capacity: 5.5
+    typical_turnaround: 45
+    gate_preference: [terminal_A, terminal_B]
+    tasks:
+      deplaning: {duration: 7, variance: 0.15, required_vehicles: [passenger_stairs]}
+      cargo_unload: {duration: 11, variance: 0.20, required_vehicles: [baggage_loader]}
+      refueling: {duration: 13, variance: 0.15, required_vehicles: [fuel_truck]}
+      catering: {duration: 16, variance: 0.20, required_vehicles: [catering_truck]}
+      cleaning: {duration: 22, variance: 0.25, required_vehicles: [cleaning_crew]}
+      water_service: {duration: 8, variance: 0.15, required_vehicles: [water_truck]}
+      cargo_load: {duration: 11, variance: 0.20, required_vehicles: [baggage_loader]}
+      boarding: {duration: 16, variance: 0.20, required_vehicles: [passenger_stairs]}
+      pushback: {duration: 5, variance: 0.10, required_vehicles: [tug]}
+    precedence:
+      deplaning: []
+      cargo_unload: [deplaning]
+      refueling: [deplaning]
+      catering: [deplaning, cleaning]
+      cleaning: [deplaning]
+      water_service: [deplaning]
+      cargo_load: [cargo_unload, cleaning]
+      boarding: [cleaning, catering]
+      pushback: [boarding, cargo_load, refueling]
+
+  B777:
+    category: wide_body
+    pax_capacity: 396
+    cargo_capacity: 18
+    typical_turnaround: 90
+    gate_preference: [terminal_C, terminal_D]
+    tasks:
+      deplaning: {duration: 15, variance: 0.15, required_vehicles: [jetbridge, passenger_stairs]}
+      cargo_unload: {duration: 25, variance: 0.20, required_vehicles: [cargo_loader, cargo_loader]}
+      refueling: {duration: 20, variance: 0.15, required_vehicles: [fuel_truck, fuel_truck]}
+      catering: {duration: 30, variance: 0.20, required_vehicles: [catering_truck, catering_truck]}
+      cleaning: {duration: 35, variance: 0.25, required_vehicles: [cleaning_crew, cleaning_crew]}
+      water_service: {duration: 12, variance: 0.15, required_vehicles: [water_truck]}
+      lavatory_service: {duration: 10, variance: 0.15, required_vehicles: [lavatory_truck]}
+      cargo_load: {duration: 25, variance: 0.20, required_vehicles: [cargo_loader, cargo_loader]}
+      boarding: {duration: 25, variance: 0.20, required_vehicles: [jetbridge, passenger_stairs]}
+      pushback: {duration: 7, variance: 0.10, required_vehicles: [tug]}
+    precedence:
+      deplaning: []
+      cargo_unload: [deplaning]
+      refueling: [deplaning]
+      catering: [deplaning, cleaning]
+      cleaning: [deplaning]
+      water_service: [deplaning]
+      lavatory_service: [deplaning]
+      cargo_load: [cargo_unload, cleaning]
+      boarding: [cleaning, catering]
+      pushback: [boarding, cargo_load, refueling, lavatory_service]
+
+  A321:
+    category: narrow_body
+    pax_capacity: 220
+    cargo_capacity: 6
+    typical_turnaround: 50
+    gate_preference: [terminal_A, terminal_B]
+    tasks:
+      deplaning: {duration: 9, variance: 0.15, required_vehicles: [passenger_stairs]}
+      cargo_unload: {duration: 12, variance: 0.20, required_vehicles: [baggage_loader]}
+      refueling: {duration: 14, variance: 0.15, required_vehicles: [fuel_truck]}
+      catering: {duration: 18, variance: 0.20, required_vehicles: [catering_truck]}
+      cleaning: {duration: 24, variance: 0.25, required_vehicles: [cleaning_crew]}
+      water_service: {duration: 9, variance: 0.15, required_vehicles: [water_truck]}
+      cargo_load: {duration: 12, variance: 0.20, required_vehicles: [baggage_loader]}
+      boarding: {duration: 18, variance: 0.20, required_vehicles: [passenger_stairs]}
+      pushback: {duration: 5, variance: 0.10, required_vehicles: [tug]}
+    precedence:
+      deplaning: []
+      cargo_unload: [deplaning]
+      refueling: [deplaning]
+      catering: [deplaning, cleaning]
+      cleaning: [deplaning]
+      water_service: [deplaning]
+      cargo_load: [cargo_unload, cleaning]
+      boarding: [cleaning, catering]
+      pushback: [boarding, cargo_load, refueling]
+
+  A350:
+    category: wide_body
+    pax_capacity: 366
+    cargo_capacity: 16
+    typical_turnaround: 85
+    gate_preference: [terminal_C, terminal_D]
+    tasks:
+      deplaning: {duration: 14, variance: 0.15, required_vehicles: [jetbridge, passenger_stairs]}
+      cargo_unload: {duration: 23, variance: 0.20, required_vehicles: [cargo_loader, cargo_loader]}
+      refueling: {duration: 18, variance: 0.15, required_vehicles: [fuel_truck, fuel_truck]}
+      catering: {duration: 28, variance: 0.20, required_vehicles: [catering_truck, catering_truck]}
+      cleaning: {duration: 33, variance: 0.25, required_vehicles: [cleaning_crew, cleaning_crew]}
+      water_service: {duration: 11, variance: 0.15, required_vehicles: [water_truck]}
+      lavatory_service: {duration: 9, variance: 0.15, required_vehicles: [lavatory_truck]}
+      cargo_load: {duration: 23, variance: 0.20, required_vehicles: [cargo_loader, cargo_loader]}
+      boarding: {duration: 23, variance: 0.20, required_vehicles: [jetbridge, passenger_stairs]}
+      pushback: {duration: 6, variance: 0.10, required_vehicles: [tug]}
+    precedence:
+      deplaning: []
+      cargo_unload: [deplaning]
+      refueling: [deplaning]
+      catering: [deplaning, cleaning]
+      cleaning: [deplaning]
+      water_service: [deplaning]
+      lavatory_service: [deplaning]
+      cargo_load: [cargo_unload, cleaning]
+      boarding: [cleaning, catering]
+      pushback: [boarding, cargo_load, refueling, lavatory_service]

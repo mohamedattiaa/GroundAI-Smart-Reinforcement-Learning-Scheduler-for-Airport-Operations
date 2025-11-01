@@ -1,0 +1,81 @@
+============================================================
+AIRPORT GROUND HANDLING DATASET STATISTICS
+============================================================
+
+FLIGHT STATISTICS
+------------------------------------------------------------
+Total flights: 125
+Date range: 2024-01-01 to 2024-01-01
+Number of days: 1
+
+Daily flight distribution:
+  Average: 125.0
+  Min: 125
+  Max: 125
+  Std Dev: nan
+
+Weekday vs Weekend:
+  Weekday flights: 125 (100.0%)
+  Weekend flights: 0 (0.0%)
+
+Aircraft type distribution:
+  A320: 41 (32.8%)
+  B737: 37 (29.6%)
+  A321: 25 (20.0%)
+  B777: 15 (12.0%)
+  A350: 7 (5.6%)
+
+DELAY STATISTICS
+------------------------------------------------------------
+Average arrival delay: 10.23 minutes
+Median arrival delay: 9.20 minutes
+Max arrival delay: 32.64 minutes
+Flights with delay > 15 min: 25 (20.0%)
+
+Equipment failures:
+  Total: 5 (4.0%)
+
+TASK STATISTICS
+------------------------------------------------------------
+Total tasks: 1147
+Average tasks per flight: 9.2
+
+Task distribution:
+  deplaning: 125
+  cargo_unload: 125
+  refueling: 125
+  catering: 125
+  cleaning: 125
+  water_service: 125
+  cargo_load: 125
+  boarding: 125
+  pushback: 125
+  lavatory_service: 22
+
+Average task duration (minutes):
+  cleaning: 23.4
+  catering: 18.0
+  boarding: 16.8
+  refueling: 13.5
+  cargo_load: 12.8
+  cargo_unload: 12.7
+  lavatory_service: 9.4
+  deplaning: 8.4
+  water_service: 8.2
+  pushback: 4.8
+
+POSITION UTILIZATION
+------------------------------------------------------------
+Top 10 most used positions:
+  terminal_D_gate_3: 6 flights
+  terminal_A_gate_1: 6 flights
+  terminal_B_gate_6: 5 flights
+  terminal_A_gate_5: 5 flights
+  terminal_B_gate_7: 5 flights
+  terminal_B_gate_5: 5 flights
+  terminal_D_gate_2: 4 flights
+  terminal_C_gate_8: 4 flights
+  remote_stand_4: 4 flights
+  remote_stand_15: 4 flights
+
+============================================================

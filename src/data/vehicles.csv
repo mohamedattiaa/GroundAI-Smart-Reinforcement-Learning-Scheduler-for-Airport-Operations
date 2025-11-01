@@ -1,0 +1,9 @@
+vehicle_id,vehicle_type,capacity,current_position,speed_kmh,available_from
+V1,RefuelTruck,5,Depot_1,28,07:14
+V2,Bus,5,Depot_2,15,07:48
+V3,CateringTruck,4,Depot_2,23,07:09
+V4,CateringTruck,3,Depot_1,17,07:24
+V5,RefuelTruck,3,Depot_2,23,07:51
+V6,RefuelTruck,4,Depot_3,18,07:59
+V7,Bus,1,Depot_3,24,07:53
+V8,CleaningVan,5,Depot_1,17,07:02

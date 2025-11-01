@@ -1,0 +1,147 @@
+```
+
+---
+
+## 🗂️ Complete Project Architecture
+
+Here's the **complete folder structure** you should have:
+```
+airport-ground-handling/
+│
+├── 📁 configs/                           # Configuration files
+│   ├── aircraft_types.yaml
+│   ├── airport_config.yaml
+│   ├── generation_config.yaml
+│   └── rag_config.yaml                   # Phase 2
+│
+├── 📁 data/                              # Generated datasets
+│   ├── 📁 raw/                           # Raw generated data
+│   │   ├── flight_schedules.csv
+│   │   ├── tasks.csv
+│   │   ├── aircraft_specs.json
+│   │   ├── vehicle_fleet.json
+│   │   ├── airport_layout.json
+│   │   └── travel_times.csv
+│   │
+│   ├── 📁 processed/                     # Processed data
+│   │   ├── 📁 scenarios/                 # Scenario chunks
+│   │   │   ├── scenario_0001.json
+│   │   │   ├── scenario_0002.json
+│   │   │   └── ...
+│   │   │
+│   │   ├── 📁 embeddings/                # Phase 2: Embeddings cache
+│   │   │   └── scenario_embeddings.pkl
+│   │   │
+│   │   └── 📁 chroma_db/                 # Phase 2: Vector store
+│   │       └── (ChromaDB files)
+│   │
+│   ├── 📁 statistics/                    # Analysis results
+│   │   ├── dataset_summary.txt
+│   │   └── 📁 visualizations/
+│   │       ├── daily_traffic.png
+│   │       ├── delay_distribution.png
+│   │       └── ...
+│   │
+│   └── 📁 test/                          # Test data (created during tests)
+│       └── chroma_db/
+│
+├── 📁 src/                               # Phase 1: Dataset generation
+│   ├── __init__.py
+│   │
+│   ├── 📁 data_generation/
+│   │   ├── __init__.py
+│   │   ├── airport_config.py
+│   │   ├── aircraft_generator.py
+│   │   ├── vehicle_generator.py
+│   │   ├── scenario_generator.py
+│   │   └── utils.py
+│   │
+│   ├── 📁 validation/
+│   │   ├── __init__.py
+│   │   ├── constraint_checker.py
+│   │   └── statistics.py
+│   │
+│   └── 📁 visualization/
+│       ├── __init__.py
+│       ├── gantt_chart.py
+│       └── plots.py
+│
+├── 📁 phase2_rag_agent_rl/              # Phase 2: RAG/Agent/RL
+│   ├── __init__.py
+│   │
+│   ├── 📁 rag_system/                    # RAG System
+│   │   ├── __init__.py
+│   │   ├── embeddings_generator.py
+│   │   ├── vector_store.py
+│   │   ├── retriever.py
+│   │   ├── rag_query_engine.py
+│   │   └── test_rag.py
+│   │
+│   ├── 📁 multi_agent/                   # Multi-Agent System (Phase 2B)
+│   │   ├── __init__.py
+│   │   ├── aircraft_agent.py
+│   │   ├── vehicle_agent.py
+│   │   ├── coordinator_agent.py
+│   │   └── crew_orchestrator.py
+│   │
+│   ├── 📁 rl_system/                     # RL System (Phase 2C)
+│   │   ├── __init__.py
+│   │   ├── environment.py
+│   │   ├── trainer.py
+│   │   ├── policies.py
+│   │   └── evaluator.py
+│   │
+│   ├── 📁 hybrid_system/                 # Combined System (Phase 2D)
+│   │   ├── __init__.py
+│   │   ├── hybrid_scheduler.py
+│   │   └── explainer.py
+│   │
+│   └── 📁 utils/                         # Phase 2 utilities
+│       ├── __init__.py
+│       ├── data_loader.py
+│       └── visualization.py
+│
+├── 📁 models/                            # Saved models
+│   ├── 📁 embeddings/                    # Embedding models cache
+│   └── 📁 rl_checkpoints/                # RL model checkpoints
+│
+├── 📁 logs/                              # Training logs
+│   └── (log files)
+│
+├── 📁 notebooks/                         # Jupyter notebooks
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_dataset_validation.ipynb
+│   ├── 03_rag_system_demo.ipynb         # Phase 2
+│   └── 04_agent_demo.ipynb              # Phase 2
+│
+├── 📁 tests/                             # Unit tests
+│   ├── test_generators.py               # Phase 1 tests
+│   └── test_rag_system.py               # Phase 2 tests
+│
+├── 📄 requirements.txt                   # Phase 1 dependencies
+├── 📄 requirements_phase2.txt            # Phase 2 dependencies
+├── 📄 setup.py                           # Package setup
+│
+├── 📄 generate_dataset.py                # Phase 1: Main generator
+├── 📄 create_configs.py                  # Helper: Create configs
+├── 📄 fix_json_files.py                  # Helper: Fix NaN issues
+├── 📄 check_yaml.py                      # Helper: Validate YAML
+├── 📄 check_structure.py                 # Helper: Verify structure
+├── 📄 test_generation.py                 # Phase 1: Test generation
+├── 📄 test_positions.py                  # Phase 1: Test positions
+│
+├── 📄 setup_phase2.py                    # Phase 2: Setup checker
+├── 📄 build_rag_system.py                # Phase 2: Build RAG
+├── 📄 demo_rag.py                        # Phase 2: RAG demos
+├── 📄 query_examples.py                  # Phase 2: Example queries
+├── 📄 run_rag_pipeline.sh                # Phase 2: Linux pipeline
+├── 📄 run_rag_pipeline.bat               # Phase 2: Windows pipeline
+│
+├── 📄 demo_agents.py                     # Phase 2B: Multi-agent demo (coming)
+├── 📄 demo_rl.py                         # Phase 2C: RL demo (coming)
+├── 📄 demo_hybrid.py                     # Phase 2D: Hybrid demo (coming)
+│
+├── 📄 .gitignore
+├── 📄 README.md                          # Main README
+├── 📄 README_PHASE2.md                   # Phase 2 README
+└── 📄 PROJECT_CHECKLIST.md               # Progress tracker

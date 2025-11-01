@@ -1,0 +1,6 @@
+vehicle_id,n_tasks,busy_min,transit_min,overlaps
+V1,8,80.0,31.0,0
+V2,4,60.0,14.0,0
+V3,4,48.0,15.0,0
+V4,4,40.0,13.0,0
+V5,4,20.0,26.0,0

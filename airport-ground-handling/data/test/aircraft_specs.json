@@ -1,0 +1,501 @@
+{
+  "A320": {
+    "category": "narrow_body",
+    "pax_capacity": 180,
+    "turnaround_time": 45,
+    "tasks": {
+      "deplaning": {
+        "duration": 7,
+        "required_vehicles": [
+          "passenger_stairs"
+        ]
+      },
+      "cargo_unload": {
+        "duration": 10,
+        "required_vehicles": [
+          "baggage_loader"
+        ]
+      },
+      "refueling": {
+        "duration": 12,
+        "required_vehicles": [
+          "fuel_truck"
+        ]
+      },
+      "catering": {
+        "duration": 15,
+        "required_vehicles": [
+          "catering_truck"
+        ]
+      },
+      "cleaning": {
+        "duration": 20,
+        "required_vehicles": [
+          "cleaning_crew"
+        ]
+      },
+      "water_service": {
+        "duration": 8,
+        "required_vehicles": [
+          "water_truck"
+        ]
+      },
+      "cargo_load": {
+        "duration": 10,
+        "required_vehicles": [
+          "baggage_loader"
+        ]
+      },
+      "boarding": {
+        "duration": 15,
+        "required_vehicles": [
+          "passenger_stairs"
+        ]
+      },
+      "pushback": {
+        "duration": 5,
+        "required_vehicles": [
+          "tug"
+        ]
+      }
+    },
+    "precedence": {
+      "deplaning": [],
+      "cargo_unload": [
+        "deplaning"
+      ],
+      "refueling": [
+        "deplaning"
+      ],
+      "catering": [
+        "deplaning",
+        "cleaning"
+      ],
+      "cleaning": [
+        "deplaning"
+      ],
+      "water_service": [
+        "deplaning"
+      ],
+      "cargo_load": [
+        "cargo_unload",
+        "cleaning"
+      ],
+      "boarding": [
+        "cleaning",
+        "catering"
+      ],
+      "pushback": [
+        "boarding",
+        "cargo_load",
+        "refueling"
+      ]
+    }
+  },
+  "B737": {
+    "category": "narrow_body",
+    "pax_capacity": 189,
+    "turnaround_time": 45,
+    "tasks": {
+      "deplaning": {
+        "duration": 7,
+        "required_vehicles": [
+          "passenger_stairs"
+        ]
+      },
+      "cargo_unload": {
+        "duration": 11,
+        "required_vehicles": [
+          "baggage_loader"
+        ]
+      },
+      "refueling": {
+        "duration": 13,
+        "required_vehicles": [
+          "fuel_truck"
+        ]
+      },
+      "catering": {
+        "duration": 16,
+        "required_vehicles": [
+          "catering_truck"
+        ]
+      },
+      "cleaning": {
+        "duration": 22,
+        "required_vehicles": [
+          "cleaning_crew"
+        ]
+      },
+      "water_service": {
+        "duration": 8,
+        "required_vehicles": [
+          "water_truck"
+        ]
+      },
+      "cargo_load": {
+        "duration": 11,
+        "required_vehicles": [
+          "baggage_loader"
+        ]
+      },
+      "boarding": {
+        "duration": 16,
+        "required_vehicles": [
+          "passenger_stairs"
+        ]
+      },
+      "pushback": {
+        "duration": 5,
+        "required_vehicles": [
+          "tug"
+        ]
+      }
+    },
+    "precedence": {
+      "deplaning": [],
+      "cargo_unload": [
+        "deplaning"
+      ],
+      "refueling": [
+        "deplaning"
+      ],
+      "catering": [
+        "deplaning",
+        "cleaning"
+      ],
+      "cleaning": [
+        "deplaning"
+      ],
+      "water_service": [
+        "deplaning"
+      ],
+      "cargo_load": [
+        "cargo_unload",
+        "cleaning"
+      ],
+      "boarding": [
+        "cleaning",
+        "catering"
+      ],
+      "pushback": [
+        "boarding",
+        "cargo_load",
+        "refueling"
+      ]
+    }
+  },
+  "B777": {
+    "category": "wide_body",
+    "pax_capacity": 396,
+    "turnaround_time": 90,
+    "tasks": {
+      "deplaning": {
+        "duration": 15,
+        "required_vehicles": [
+          "jetbridge",
+          "passenger_stairs"
+        ]
+      },
+      "cargo_unload": {
+        "duration": 25,
+        "required_vehicles": [
+          "cargo_loader",
+          "cargo_loader"
+        ]
+      },
+      "refueling": {
+        "duration": 20,
+        "required_vehicles": [
+          "fuel_truck",
+          "fuel_truck"
+        ]
+      },
+      "catering": {
+        "duration": 30,
+        "required_vehicles": [
+          "catering_truck",
+          "catering_truck"
+        ]
+      },
+      "cleaning": {
+        "duration": 35,
+        "required_vehicles": [
+          "cleaning_crew",
+          "cleaning_crew"
+        ]
+      },
+      "water_service": {
+        "duration": 12,
+        "required_vehicles": [
+          "water_truck"
+        ]
+      },
+      "lavatory_service": {
+        "duration": 10,
+        "required_vehicles": [
+          "lavatory_truck"
+        ]
+      },
+      "cargo_load": {
+        "duration": 25,
+        "required_vehicles": [
+          "cargo_loader",
+          "cargo_loader"
+        ]
+      },
+      "boarding": {
+        "duration": 25,
+        "required_vehicles": [
+          "jetbridge",
+          "passenger_stairs"
+        ]
+      },
+      "pushback": {
+        "duration": 7,
+        "required_vehicles": [
+          "tug"
+        ]
+      }
+    },
+    "precedence": {
+      "deplaning": [],
+      "cargo_unload": [
+        "deplaning"
+      ],
+      "refueling": [
+        "deplaning"
+      ],
+      "catering": [
+        "deplaning",
+        "cleaning"
+      ],
+      "cleaning": [
+        "deplaning"
+      ],
+      "water_service": [
+        "deplaning"
+      ],
+      "lavatory_service": [
+        "deplaning"
+      ],
+      "cargo_load": [
+        "cargo_unload",
+        "cleaning"
+      ],
+      "boarding": [
+        "cleaning",
+        "catering"
+      ],
+      "pushback": [
+        "boarding",
+        "cargo_load",
+        "refueling",
+        "lavatory_service"
+      ]
+    }
+  },
+  "A321": {
+    "category": "narrow_body",
+    "pax_capacity": 220,
+    "turnaround_time": 50,
+    "tasks": {
+      "deplaning": {
+        "duration": 9,
+        "required_vehicles": [
+          "passenger_stairs"
+        ]
+      },
+      "cargo_unload": {
+        "duration": 12,
+        "required_vehicles": [
+          "baggage_loader"
+        ]
+      },
+      "refueling": {
+        "duration": 14,
+        "required_vehicles": [
+          "fuel_truck"
+        ]
+      },
+      "catering": {
+        "duration": 18,
+        "required_vehicles": [
+          "catering_truck"
+        ]
+      },
+      "cleaning": {
+        "duration": 24,
+        "required_vehicles": [
+          "cleaning_crew"
+        ]
+      },
+      "water_service": {
+        "duration": 9,
+        "required_vehicles": [
+          "water_truck"
+        ]
+      },
+      "cargo_load": {
+        "duration": 12,
+        "required_vehicles": [
+          "baggage_loader"
+        ]
+      },
+      "boarding": {
+        "duration": 18,
+        "required_vehicles": [
+          "passenger_stairs"
+        ]
+      },
+      "pushback": {
+        "duration": 5,
+        "required_vehicles": [
+          "tug"
+        ]
+      }
+    },
+    "precedence": {
+      "deplaning": [],
+      "cargo_unload": [
+        "deplaning"
+      ],
+      "refueling": [
+        "deplaning"
+      ],
+      "catering": [
+        "deplaning",
+        "cleaning"
+      ],
+      "cleaning": [
+        "deplaning"
+      ],
+      "water_service": [
+        "deplaning"
+      ],
+      "cargo_load": [
+        "cargo_unload",
+        "cleaning"
+      ],
+      "boarding": [
+        "cleaning",
+        "catering"
+      ],
+      "pushback": [
+        "boarding",
+        "cargo_load",
+        "refueling"
+      ]
+    }
+  },
+  "A350": {
+    "category": "wide_body",
+    "pax_capacity": 366,
+    "turnaround_time": 85,
+    "tasks": {
+      "deplaning": {
+        "duration": 14,
+        "required_vehicles": [
+          "jetbridge",
+          "passenger_stairs"
+        ]
+      },
+      "cargo_unload": {
+        "duration": 23,
+        "required_vehicles": [
+          "cargo_loader",
+          "cargo_loader"
+        ]
+      },
+      "refueling": {
+        "duration": 18,
+        "required_vehicles": [
+          "fuel_truck",
+          "fuel_truck"
+        ]
+      },
+      "catering": {
+        "duration": 28,
+        "required_vehicles": [
+          "catering_truck",
+          "catering_truck"
+        ]
+      },
+      "cleaning": {
+        "duration": 33,
+        "required_vehicles": [
+          "cleaning_crew",
+          "cleaning_crew"
+        ]
+      },
+      "water_service": {
+        "duration": 11,
+        "required_vehicles": [
+          "water_truck"
+        ]
+      },
+      "lavatory_service": {
+        "duration": 9,
+        "required_vehicles": [
+          "lavatory_truck"
+        ]
+      },
+      "cargo_load": {
+        "duration": 23,
+        "required_vehicles": [
+          "cargo_loader",
+          "cargo_loader"
+        ]
+      },
+      "boarding": {
+        "duration": 23,
+        "required_vehicles": [
+          "jetbridge",
+          "passenger_stairs"
+        ]
+      },
+      "pushback": {
+        "duration": 6,
+        "required_vehicles": [
+          "tug"
+        ]
+      }
+    },
+    "precedence": {
+      "deplaning": [],
+      "cargo_unload": [
+        "deplaning"
+      ],
+      "refueling": [
+        "deplaning"
+      ],
+      "catering": [
+        "deplaning",
+        "cleaning"
+      ],
+      "cleaning": [
+        "deplaning"
+      ],
+      "water_service": [
+        "deplaning"
+      ],
+      "lavatory_service": [
+        "deplaning"
+      ],
+      "cargo_load": [
+        "cargo_unload",
+        "cleaning"
+      ],
+      "boarding": [
+        "cleaning",
+        "catering"
+      ],
+      "pushback": [
+        "boarding",
+        "cargo_load",
+        "refueling",
+        "lavatory_service"
+      ]
+    }
+  }
+}

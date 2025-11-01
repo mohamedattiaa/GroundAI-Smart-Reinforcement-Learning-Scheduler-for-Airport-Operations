@@ -1,0 +1,775 @@
+{
+  "scenario_id": "scenario_0034",
+  "num_flights": 7,
+  "time_window": {
+    "start": "2024-01-30 22:14:28.357891232",
+    "end": "2024-01-30 23:59:42"
+  },
+  "aircraft_mix": {
+    "B737": 4,
+    "A321": 1,
+    "B777": 1,
+    "A320": 1
+  },
+  "flights": [
+    {
+      "flight_id": "FL01300095",
+      "aircraft_type": "B737",
+      "arrival_time": "2024-01-30 22:05:17",
+      "scheduled_departure": "2024-01-30 22:59:17",
+      "position": "terminal_B_gate_9",
+      "passenger_count": 189,
+      "is_international": false,
+      "arrival_delay_minutes": 9.189298187196286,
+      "actual_arrival": "2024-01-30 22:14:28.357891232",
+      "equipment_failure": false,
+      "failed_task": null,
+      "date": "2024-01-30",
+      "day_of_week": "Tuesday",
+      "is_weekend": false
+    },
+    {
+      "flight_id": "FL01300080",
+      "aircraft_type": "B737",
+      "arrival_time": "2024-01-30 22:08:25",
+      "scheduled_departure": "2024-01-30 23:02:25",
+      "position": "remote_stand_1",
+      "passenger_count": 189,
+      "is_international": true,
+      "arrival_delay_minutes": 9.074752386972223,
+      "actual_arrival": "2024-01-30 22:17:29.485143220",
+      "equipment_failure": false,
+      "failed_task": null,
+      "date": "2024-01-30",
+      "day_of_week": "Tuesday",
+      "is_weekend": false
+    },
+    {
+      "flight_id": "FL01300115",
+      "aircraft_type": "B737",
+      "arrival_time": "2024-01-30 22:05:15",
+      "scheduled_departure": "2024-01-30 22:59:15",
+      "position": "remote_stand_15",
+      "passenger_count": 189,
+      "is_international": false,
+      "arrival_delay_minutes": 15.602782749099928,
+      "actual_arrival": "2024-01-30 22:20:51.166964946",
+      "equipment_failure": false,
+      "failed_task": null,
+      "date": "2024-01-30",
+      "day_of_week": "Tuesday",
+      "is_weekend": false
+    },
+    {
+      "flight_id": "FL01300124",
+      "aircraft_type": "A321",
+      "arrival_time": "2024-01-30 21:56:15",
+      "scheduled_departure": "2024-01-30 22:56:15",
+      "position": "terminal_C_gate_3",
+      "passenger_count": 220,
+      "is_international": false,
+      "arrival_delay_minutes": 25.482350359303,
+      "actual_arrival": "2024-01-30 22:21:43.941021558",
+      "equipment_failure": false,
+      "failed_task": null,
+      "date": "2024-01-30",
+      "day_of_week": "Tuesday",
+      "is_weekend": false
+    },
+    {
+      "flight_id": "FL01300123",
+      "aircraft_type": "B737",
+      "arrival_time": "2024-01-30 22:11:24",
+      "scheduled_departure": "2024-01-30 23:05:24",
+      "position": "terminal_A_gate_5",
+      "passenger_count": 189,
+      "is_international": false,
+      "arrival_delay_minutes": 17.071726169477973,
+      "actual_arrival": "2024-01-30 22:28:28.303570170",
+      "equipment_failure": false,
+      "failed_task": null,
+      "date": "2024-01-30",
+      "day_of_week": "Tuesday",
+      "is_weekend": false
+    },
+    {
+      "flight_id": "FL01300117",
+      "aircraft_type": "B777",
+      "arrival_time": "2024-01-30 22:11:42",
+      "scheduled_departure": "2024-01-30 23:59:42",
+      "position": "terminal_D_gate_3",
+      "passenger_count": 396,
+      "is_international": true,
+      "arrival_delay_minutes": 20.630850200983215,
+      "actual_arrival": "2024-01-30 22:32:19.851012060",
+      "equipment_failure": false,
+      "failed_task": null,
+      "date": "2024-01-30",
+      "day_of_week": "Tuesday",
+      "is_weekend": false
+    },
+    {
+      "flight_id": "FL01300127",
+      "aircraft_type": "A320",
+      "arrival_time": "2024-01-30 22:49:49",
+      "scheduled_departure": "2024-01-30 23:43:49",
+      "position": "terminal_C_gate_8",
+      "passenger_count": 180,
+      "is_international": true,
+      "arrival_delay_minutes": 4.4542077787598,
+      "actual_arrival": "2024-01-30 22:54:16.252466728",
+      "equipment_failure": false,
+      "failed_task": null,
+      "date": "2024-01-30",
+      "day_of_week": "Tuesday",
+      "is_weekend": false
+    }
+  ],
+  "tasks": [
+    {
+      "flight_id": "FL01300124",
+      "task_name": "deplaning",
+      "duration": 8,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "[]",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300124",
+      "task_name": "cargo_unload",
+      "duration": 12,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300124",
+      "task_name": "refueling",
+      "duration": 13,
+      "required_vehicles": "['fuel_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300124",
+      "task_name": "catering",
+      "duration": 19,
+      "required_vehicles": "['catering_truck']",
+      "predecessors": "['deplaning', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300124",
+      "task_name": "cleaning",
+      "duration": 24,
+      "required_vehicles": "['cleaning_crew']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300124",
+      "task_name": "water_service",
+      "duration": 7,
+      "required_vehicles": "['water_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300124",
+      "task_name": "cargo_load",
+      "duration": 13,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['cargo_unload', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300124",
+      "task_name": "boarding",
+      "duration": 16,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "['cleaning', 'catering']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300124",
+      "task_name": "pushback",
+      "duration": 5,
+      "required_vehicles": "['tug']",
+      "predecessors": "['boarding', 'cargo_load', 'refueling']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300115",
+      "task_name": "deplaning",
+      "duration": 6,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "[]",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300115",
+      "task_name": "cargo_unload",
+      "duration": 12,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300115",
+      "task_name": "refueling",
+      "duration": 13,
+      "required_vehicles": "['fuel_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300115",
+      "task_name": "catering",
+      "duration": 14,
+      "required_vehicles": "['catering_truck']",
+      "predecessors": "['deplaning', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300115",
+      "task_name": "cleaning",
+      "duration": 24,
+      "required_vehicles": "['cleaning_crew']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300115",
+      "task_name": "water_service",
+      "duration": 7,
+      "required_vehicles": "['water_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300115",
+      "task_name": "cargo_load",
+      "duration": 12,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['cargo_unload', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300115",
+      "task_name": "boarding",
+      "duration": 15,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "['cleaning', 'catering']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300115",
+      "task_name": "pushback",
+      "duration": 5,
+      "required_vehicles": "['tug']",
+      "predecessors": "['boarding', 'cargo_load', 'refueling']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300095",
+      "task_name": "deplaning",
+      "duration": 6,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "[]",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300095",
+      "task_name": "cargo_unload",
+      "duration": 13,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300095",
+      "task_name": "refueling",
+      "duration": 15,
+      "required_vehicles": "['fuel_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300095",
+      "task_name": "catering",
+      "duration": 19,
+      "required_vehicles": "['catering_truck']",
+      "predecessors": "['deplaning', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300095",
+      "task_name": "cleaning",
+      "duration": 23,
+      "required_vehicles": "['cleaning_crew']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300095",
+      "task_name": "water_service",
+      "duration": 7,
+      "required_vehicles": "['water_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300095",
+      "task_name": "cargo_load",
+      "duration": 9,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['cargo_unload', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300095",
+      "task_name": "boarding",
+      "duration": 13,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "['cleaning', 'catering']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300095",
+      "task_name": "pushback",
+      "duration": 4,
+      "required_vehicles": "['tug']",
+      "predecessors": "['boarding', 'cargo_load', 'refueling']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300080",
+      "task_name": "deplaning",
+      "duration": 7,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "[]",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300080",
+      "task_name": "cargo_unload",
+      "duration": 13,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300080",
+      "task_name": "refueling",
+      "duration": 14,
+      "required_vehicles": "['fuel_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300080",
+      "task_name": "catering",
+      "duration": 14,
+      "required_vehicles": "['catering_truck']",
+      "predecessors": "['deplaning', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300080",
+      "task_name": "cleaning",
+      "duration": 18,
+      "required_vehicles": "['cleaning_crew']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300080",
+      "task_name": "water_service",
+      "duration": 9,
+      "required_vehicles": "['water_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300080",
+      "task_name": "cargo_load",
+      "duration": 12,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['cargo_unload', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300080",
+      "task_name": "boarding",
+      "duration": 16,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "['cleaning', 'catering']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300080",
+      "task_name": "pushback",
+      "duration": 4,
+      "required_vehicles": "['tug']",
+      "predecessors": "['boarding', 'cargo_load', 'refueling']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300123",
+      "task_name": "deplaning",
+      "duration": 6,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "[]",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300123",
+      "task_name": "cargo_unload",
+      "duration": 9,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300123",
+      "task_name": "refueling",
+      "duration": 13,
+      "required_vehicles": "['fuel_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300123",
+      "task_name": "catering",
+      "duration": 14,
+      "required_vehicles": "['catering_truck']",
+      "predecessors": "['deplaning', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300123",
+      "task_name": "cleaning",
+      "duration": 24,
+      "required_vehicles": "['cleaning_crew']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300123",
+      "task_name": "water_service",
+      "duration": 6,
+      "required_vehicles": "['water_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300123",
+      "task_name": "cargo_load",
+      "duration": 12,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['cargo_unload', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300123",
+      "task_name": "boarding",
+      "duration": 19,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "['cleaning', 'catering']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300123",
+      "task_name": "pushback",
+      "duration": 5,
+      "required_vehicles": "['tug']",
+      "predecessors": "['boarding', 'cargo_load', 'refueling']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "deplaning",
+      "duration": 12,
+      "required_vehicles": "['jetbridge', 'passenger_stairs']",
+      "predecessors": "[]",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "cargo_unload",
+      "duration": 27,
+      "required_vehicles": "['cargo_loader', 'cargo_loader']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "refueling",
+      "duration": 20,
+      "required_vehicles": "['fuel_truck', 'fuel_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "catering",
+      "duration": 30,
+      "required_vehicles": "['catering_truck', 'catering_truck']",
+      "predecessors": "['deplaning', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "cleaning",
+      "duration": 36,
+      "required_vehicles": "['cleaning_crew', 'cleaning_crew']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "water_service",
+      "duration": 12,
+      "required_vehicles": "['water_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "lavatory_service",
+      "duration": 9,
+      "required_vehicles": "['lavatory_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "cargo_load",
+      "duration": 29,
+      "required_vehicles": "['cargo_loader', 'cargo_loader']",
+      "predecessors": "['cargo_unload', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "boarding",
+      "duration": 28,
+      "required_vehicles": "['jetbridge', 'passenger_stairs']",
+      "predecessors": "['cleaning', 'catering']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300117",
+      "task_name": "pushback",
+      "duration": 7,
+      "required_vehicles": "['tug']",
+      "predecessors": "['boarding', 'cargo_load', 'refueling', 'lavatory_service']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300127",
+      "task_name": "deplaning",
+      "duration": 8,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "[]",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300127",
+      "task_name": "cargo_unload",
+      "duration": 8,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300127",
+      "task_name": "refueling",
+      "duration": 14,
+      "required_vehicles": "['fuel_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300127",
+      "task_name": "catering",
+      "duration": 16,
+      "required_vehicles": "['catering_truck']",
+      "predecessors": "['deplaning', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300127",
+      "task_name": "cleaning",
+      "duration": 22,
+      "required_vehicles": "['cleaning_crew']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300127",
+      "task_name": "water_service",
+      "duration": 8,
+      "required_vehicles": "['water_truck']",
+      "predecessors": "['deplaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300127",
+      "task_name": "cargo_load",
+      "duration": 10,
+      "required_vehicles": "['baggage_loader']",
+      "predecessors": "['cargo_unload', 'cleaning']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300127",
+      "task_name": "boarding",
+      "duration": 12,
+      "required_vehicles": "['passenger_stairs']",
+      "predecessors": "['cleaning', 'catering']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    },
+    {
+      "flight_id": "FL01300127",
+      "task_name": "pushback",
+      "duration": 4,
+      "required_vehicles": "['tug']",
+      "predecessors": "['boarding', 'cargo_load', 'refueling']",
+      "earliest_start": null,
+      "actual_start": null,
+      "actual_end": null
+    }
+  ],
+  "statistics": {
+    "total_tasks": 64,
+    "avg_delay": 14.500852547398917,
+    "equipment_failures": 0
+  }
+}

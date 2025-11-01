@@ -1,0 +1,51 @@
+multi_agent_system:
+  # Agent types
+  agent_types:
+    - aircraft
+    - vehicle
+    - coordinator
+  
+  # Aircraft agent settings
+  aircraft_agent:
+    priority_weights:
+      time_until_departure: 0.4
+      aircraft_size: 0.3
+      passenger_count: 0.2
+      is_international: 0.1
+    
+    urgency_thresholds:
+      critical: 30  # minutes
+      high: 60
+      medium: 90
+      normal: 120
+  
+  # Vehicle agent settings
+  vehicle_agent:
+    bidding_weights:
+      availability_time: 0.5
+      current_workload: 0.3
+      travel_distance: 0.2
+    
+    return_to_base_threshold: 0.9  # 90% of max tasks
+  
+  # Coordinator settings
+  coordinator:
+    scheduling_algorithm: "priority_bidding"
+    conflict_resolution: "highest_priority_first"
+    
+    max_scheduling_rounds: 100
+    
+    assignment_strategy:
+      method: "greedy"  # or "optimal"
+      consider_future_requests: false
+  
+  # Simulation settings
+  simulation:
+    time_step: 1  # minutes
+    max_iterations: 1000
+    
+    performance_metrics:
+      - total_delay
+      - vehicle_utilization
+      - conflict_count
+      - assignment_efficiency

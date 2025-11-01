@@ -1,0 +1,6 @@
+aircraft_id,arrival_time,departure_time,stand_id,aircraft_type
+A1,10:43,11:50,S1,A321
+A2,09:10,10:25,S2,A320
+A3,08:26,10:09,S5,A320
+A4,10:31,11:58,S1,A320
+A5,08:23,09:36,S2,A321

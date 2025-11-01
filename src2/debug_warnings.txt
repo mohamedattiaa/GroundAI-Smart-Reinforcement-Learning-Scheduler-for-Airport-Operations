@@ -1,0 +1,3 @@
+Baseline: task Refueling for A4 starts before arrival (1900-01-01 08:33:00 < 1900-01-01 09:00:00)
+Baseline: task Catering for A4 starts before arrival (1900-01-01 08:46:00 < 1900-01-01 09:00:00)
+Baseline: task Pushback for A4 starts before arrival (1900-01-01 08:58:00 < 1900-01-01 09:00:00)

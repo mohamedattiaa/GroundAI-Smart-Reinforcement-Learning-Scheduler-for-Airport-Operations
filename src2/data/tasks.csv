@@ -1,0 +1,5 @@
+task_id,task_name,duration_min,precedence
+1,Boarding,5,"[2, 3]"
+2,Catering,5,[4]
+3,Deboarding,14,"[4, 5]"
+4,Refueling,7,[6]

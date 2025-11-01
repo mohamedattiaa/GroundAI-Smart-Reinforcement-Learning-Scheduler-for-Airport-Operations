@@ -1,0 +1,5 @@
+aircraft_id,planned_end,baseline_end,effective_end,delay_min
+A1,09:00,09:17,09:17,17.0
+A2,09:15,10:26,10:26,71.0
+A3,09:25,11:40,11:40,135.0
+A4,09:30,12:48,12:48,198.0
