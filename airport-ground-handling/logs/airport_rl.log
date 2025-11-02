@@ -1,0 +1,11 @@
+2025-11-01 16:39:43,748 - phase2_rag_agent_rl.rl_system.trainer - WARNING - Config file not found: config.yaml. Using defaults.
+2025-11-01 16:39:43,748 - phase2_rag_agent_rl.rl_system.trainer - INFO - RLTrainer initialized
+2025-11-01 16:39:43,758 - phase2_rag_agent_rl.rl_system.trainer - INFO - Using device: cpu
+2025-11-01 16:39:43,758 - phase2_rag_agent_rl.rl_system.trainer - INFO - ======================================================================
+2025-11-01 16:39:43,758 - phase2_rag_agent_rl.rl_system.trainer - INFO - STARTING TRAINING
+2025-11-01 16:39:43,758 - phase2_rag_agent_rl.rl_system.trainer - INFO - ======================================================================
+2025-11-01 16:39:43,758 - phase2_rag_agent_rl.rl_system.trainer - INFO - Creating 1 environment(s)...
+2025-11-01 16:39:43,768 - phase2_rag_agent_rl.rl_system.trainer - INFO - Algorithm: PPO
+2025-11-01 16:39:43,769 - phase2_rag_agent_rl.rl_system.trainer - INFO - Total timesteps: 50000
+2025-11-01 16:39:43,769 - phase2_rag_agent_rl.rl_system.trainer - INFO - Number of parallel envs: 1
+2025-11-01 16:39:43,769 - phase2_rag_agent_rl.rl_system.trainer - INFO - Creating PPO model...

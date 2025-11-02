@@ -1,0 +1,169 @@
+# GroundAI Configuration File
+# Environment, training, and system settings
+
+environment:
+  name: "AirportGroundHandling-v1"
+  num_aircraft: 10
+  num_vehicles: 30
+  episode_length: 100
+  
+  # Task parameters
+  tasks:
+    fueling:
+      duration_min: 5
+      duration_max: 15
+      priority: 1.0
+      resource_requirement: 1
+    catering:
+      duration_min: 10
+      duration_max: 25
+      priority: 0.8
+      resource_requirement: 1
+    cleaning:
+      duration_min: 15
+      duration_max: 30
+      priority: 0.6
+      resource_requirement: 1
+  
+  # Reward shaping
+  reward:
+    task_completion: 50.0          # Bonus for completing a task
+    delay_penalty_per_step: -1.0   # Penalty per timestep delay
+    idle_penalty: -0.5             # Penalty for idle resources
+    action_efficiency: 10.0         # Bonus for efficient actions
+    collision_penalty: -100.0       # Severe penalty for conflicts
+    
+  # Observation normalization
+  observation:
+    normalize: true
+    clip_range: [-1.0, 1.0]
+    
+  # Constraints
+  constraints:
+    max_delay_tolerance: 50
+    max_concurrent_tasks_per_vehicle: 1
+    min_vehicle_availability: 0.3
+
+training:
+  # Algorithm selection
+  algorithm: "PPO"  # PPO, DQN, A2C
+  total_timesteps: 100000
+  
+  # PPO specific
+  ppo:
+    learning_rate: 3.0e-4
+    n_steps: 2048
+    batch_size: 64
+    n_epochs: 10
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_range: 0.2
+    ent_coef: 0.01
+    vf_coef: 0.5
+  
+  # DQN specific
+  dqn:
+    learning_rate: 1.0e-4
+    buffer_size: 100000
+    learning_starts: 1000
+    batch_size: 32
+    tau: 1.0
+    gamma: 0.99
+    exploration_fraction: 0.1
+    exploration_final_eps: 0.05
+  
+  # A2C specific
+  a2c:
+    learning_rate: 7.0e-4
+    n_steps: 5
+    gamma: 0.99
+    gae_lambda: 0.95
+    ent_coef: 0.01
+    vf_coef: 0.5
+    max_grad_norm: 0.5
+  
+  # Training general
+  eval_freq: 5000
+  n_eval_episodes: 5
+  save_freq: 10000
+  checkpoint_dir: "./checkpoints"
+  tensorboard_log: "./logs"
+  
+  # Early stopping
+  early_stopping:
+    enabled: true
+    patience: 20
+    target_reward: 400.0
+
+evaluation:
+  n_episodes: 10
+  max_steps: 100
+  render: false
+  save_video: false
+  video_dir: "./videos"
+
+# Multi-agent settings
+multi_agent:
+  enabled: true
+  num_agents: 3
+  agent_types:
+    - "fueling_specialist"
+    - "catering_specialist"
+    - "cleaning_specialist"
+  communication_enabled: true
+  shared_experience_buffer: true
+
+# RAG Agent settings
+rag_agent:
+  enabled: true
+  embedding_model: "all-MiniLM-L6-v2"
+  vector_store: "faiss"  # faiss, chroma, weaviate
+  chunk_size: 256
+  chunk_overlap: 32
+  top_k_documents: 3
+  temperature: 0.7
+  max_tokens: 512
+
+# System settings
+system:
+  random_seed: 42
+  device: "auto"  # auto, cpu, cuda
+  num_threads: 4
+  logging_level: "INFO"
+  save_models: true
+  model_save_dir: "./models"
+
+# Dashboard settings
+dashboard:
+  enabled: true
+  host: "localhost"
+  port: 8501
+  refresh_interval: 5  # seconds
+  theme: "dark"
+  show_metrics:
+    - "average_reward"
+    - "total_delay"
+    - "task_completion_rate"
+    - "resource_utilization"
+
+# Experiment tracking
+experiment:
+  name: "airport_ground_handling_v1"
+  wandb_enabled: false  # Weights & Biases
+  mlflow_enabled: false
+  save_config: true
+  config_dir: "./experiments"
+
+# Performance profiling
+profiling:
+  enabled: false
+  profile_training: false
+  profile_evaluation: false
+  output_dir: "./profiles"
+
+# Logging
+logging:
+  file_path: "./logs/airport_rl.log"
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
