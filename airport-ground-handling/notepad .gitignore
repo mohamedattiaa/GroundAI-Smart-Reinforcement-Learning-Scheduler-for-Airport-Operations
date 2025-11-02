@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+logs/
+checkpoints/
+training_logs/
+*.log
+models/
+*.h5
+*.hdf5
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.pb
+*.tflite
